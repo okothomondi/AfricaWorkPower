@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './utils/swagger.json';
+import swaggerDocument from './docs/swagger.json';
 import config from './utils/config';
 import ErrorMiddleware from './middlewares/error.middleware';
 import { requestLoggerMiddleware } from './middlewares/requestLogger.middleware';

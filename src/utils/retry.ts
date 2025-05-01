@@ -23,7 +23,7 @@ export async function retryWithExponentialBackoff<T>(
 
       const waitTime = delay * 2 ** retries;
       logger.warn(
-        `Attempt ${retries + 1} failed. Retrying in ${waitTime}.zms...`
+        `Attempt ${retries + 1} failed. Retrying in ${waitTime}.ms...`
       );
 
       await new Promise((resolve) => setTimeout(resolve, waitTime));
