@@ -87,23 +87,20 @@ npm run start:prod
 
 2. Open your browser and navigate to `http://localhost:3000/api-docs` to view the API documentation.
 
-
 ### Running Tests
+
 1. Run unit tests:
    ```bash
    npm test
    ```
-   
 2. Run integration tests:
    ```bash
     npm run test:integration
-    ```
-   
+   ```
 3. Run unittests:
    ```bash
    npm run test:unit
    ```
-   
 4. Run coverage tests:
    ```bash
    npm run test:coverage
@@ -133,3 +130,4 @@ DB_STORAGE_PATH=./database.sqlite
 # Rate Limiting
 API_RATE_LIMIT_WINDOW_MS=900000  # 15 minutes
 API_RATE_LIMIT_MAX=100  # 100 requests per window
+```
