@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Okoth <> Africa Work Power API",
+    "version": "1.0.0",
+    "description": "API for fetching and transforming GitHub users data"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get GitHub users",
+        "description": "Returns a list of GitHub users with transformed data structure",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "users": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "username": {
+                            "type": "string",
+                            "example": "octocat"
+                          },
+                          "identifier": {
+                            "type": "integer",
+                            "example": 1
+                          },
+                          "profile_image": {
+                            "type": "string",
+                            "example": "https://github.com/images/error/octocat_happy.gif"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  }
+}
