@@ -108,3 +108,28 @@ npm run start:prod
    ```bash
    npm run test:coverage
    ```
+
+## Environment Configuration
+
+Create a `.env` file in the project root with these variables:
+
+```env
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# GitHub API Configuration
+GITHUB_API_URL=https://api.github.com
+GITHUB_TOKEN=your_personal_access_token_here
+
+# Redis Configuration
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_CACHE_TTL=300  # 5 minutes in seconds
+
+# Database Configuration (SQLite example)
+DB_STORAGE_PATH=./database.sqlite
+
+# Rate Limiting
+API_RATE_LIMIT_WINDOW_MS=900000  # 15 minutes
+API_RATE_LIMIT_MAX=100  # 100 requests per window
