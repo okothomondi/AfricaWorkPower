@@ -1,5 +1,5 @@
 import Redis from 'ioredis';
-import config from '../configurations/config';
+import config from '../utils/config';
 import logger from '../utils/logger';
 
 class CacheService {

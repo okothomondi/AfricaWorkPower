@@ -1,7 +1,7 @@
 // src/models/index.ts
 import { Sequelize } from 'sequelize';
 import { RequestLog } from './requestLog.model';
-import config from '../configurations/config';
+import config from '../utils/config';
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',

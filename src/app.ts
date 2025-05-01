@@ -5,7 +5,7 @@ import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from './utils/swagger.json';
-import config from './configurations/config';
+import config from './utils/config';
 import ErrorMiddleware from './middlewares/error.middleware';
 import { requestLoggerMiddleware } from './middlewares/requestLogger.middleware';
 import usersRouter from './routes/users.route';

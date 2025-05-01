@@ -1,5 +1,5 @@
 import app from './app';
-import config from './configurations/config';
+import config from './utils/config';
 import db from './models';
 import logger from './utils/logger';
 
